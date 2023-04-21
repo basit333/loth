@@ -280,6 +280,7 @@ body {
 }
 
 .favorites__card--title {
+  max-width: 382px;
   font-weight: 400;
   font-size: 21.85px;
   line-height: 1.2;
