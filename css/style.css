@@ -363,7 +363,7 @@ body {
 .news__container {
   display: flex;
   align-items: center;
-  animation: scroll 30s linear infinite;
+  animation: moveLeft 30s linear infinite;
 }
 
 .news__item {
@@ -382,7 +382,7 @@ body {
   animation-play-state: paused;
 }
 
-@keyframes scroll {
+@keyframes moveLeft {
   0% {
     transform: translateX(100%);
   }
@@ -771,7 +771,6 @@ body {
 }
 
 /* Section Modern */
-
 .modern {
   background: url(../images/modern.png) no-repeat center center / cover;
   min-height: 870px;
