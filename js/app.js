@@ -60,14 +60,11 @@ function dragStart(event) {
     startPos = event.clientX;
   }
   isDragging = true;
-
   // Update prevTranslate to the current translate value
   prevTranslate = currentTranslate;
-
   // Calculate the current index based on the current translate position and product width
   const productWidth = products.children[0].offsetWidth;
   const newIndex = Math.round(-prevTranslate / productWidth);
-
   // Set the currentTranslate to the start position of the current product
   currentTranslate = -1 * newIndex * productWidth;
   setTransform(currentTranslate);
