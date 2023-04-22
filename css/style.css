@@ -502,7 +502,6 @@ body {
 
 /* Media queries */
 @media (max-width: 1024px) {
-
   .best__sellers--product-container {
     padding: 0 20px;
   }
