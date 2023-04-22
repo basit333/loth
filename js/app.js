@@ -45,6 +45,7 @@ function dragStart(event) {
   } else {
     startPos = event.clientX;
   }
+
   isDragging = true;
 
   // Update prevTranslate to the current translate value
@@ -59,6 +60,7 @@ function dragStart(event) {
   } else {
     startPos = event.clientX;
   }
+
   isDragging = true;
 
   // Update prevTranslate to the current translate value
