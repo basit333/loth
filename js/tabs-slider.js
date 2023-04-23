@@ -93,31 +93,73 @@ function drag(event) {
   }
 }
 
+// // // Functions to handle the touch events
+// function touchStart(event) {
+//   startPos = event.touches[0].clientX;
+// }
+
+// function touchMove(event) {
+//   const currentPos = event.touches[0].clientX;
+//   const diff = currentPos - startPos;
+//   const productWidth = products.children[0].offsetWidth;
+//   const moveAmount = productWidth / 2; // adjust the speed by changing the number
+
+//   if (diff > moveAmount && prevTranslate + productWidth <= 0) {
+//     currentTranslate = prevTranslate + productWidth;
+//     requestAnimationFrame(() => {
+//       setTransform(currentTranslate);
+//     });
+//     startPos = currentPos;
+//     prevTranslate = currentTranslate;
+//   } else if (diff < -moveAmount && prevTranslate - productWidth >= -(products.children.length - 1) * productWidth) {
+//     currentTranslate = prevTranslate - productWidth;
+//     requestAnimationFrame(() => {
+//       setTransform(currentTranslate);
+//     });
+//     startPos = currentPos;
+//     prevTranslate = currentTranslate;
+//   }
+// }
+
+// function touchEnd() {
+//   prevTranslate = currentTranslate;
+// }
+
 // Functions to handle the touch events
+let touchStartX = 0;
+let touchEndX = 0;
+
 function touchStart(event) {
-  startPos = event.touches[0].clientX;
+  touchStartX = event.touches[0].clientX;
 }
 
 function touchMove(event) {
   const currentPos = event.touches[0].clientX;
-  const diff = currentPos - startPos;
+  const diff = currentPos - touchStartX;
   const productWidth = products.children[0].offsetWidth;
-  const moveAmount = productWidth / 10; // adjust the speed by changing the number
 
-  if (diff > moveAmount && prevTranslate + productWidth <= 0) {
-    currentTranslate = prevTranslate + productWidth;
-    requestAnimationFrame(() => {
-      setTransform(currentTranslate);
-    });
-    startPos = currentPos;
-    prevTranslate = currentTranslate;
-  } else if (diff < -moveAmount && prevTranslate - productWidth >= -(products.children.length - 1) * productWidth) {
-    currentTranslate = prevTranslate - productWidth;
-    requestAnimationFrame(() => {
-      setTransform(currentTranslate);
-    });
-    startPos = currentPos;
-    prevTranslate = currentTranslate;
+  if (diff > productWidth) {
+    const numProductsToMove = Math.floor(diff / productWidth);
+    const distanceToMove = numProductsToMove * productWidth;
+    if (prevTranslate + distanceToMove <= 0) {
+      currentTranslate = prevTranslate + distanceToMove;
+      requestAnimationFrame(() => {
+        setTransform(currentTranslate);
+      });
+      touchStartX += distanceToMove;
+      prevTranslate = currentTranslate;
+    }
+  } else if (diff < -productWidth) {
+    const numProductsToMove = Math.floor(Math.abs(diff) / productWidth);
+    const distanceToMove = numProductsToMove * productWidth;
+    if (prevTranslate - distanceToMove >= -(products.children.length - 1) * productWidth) {
+      currentTranslate = prevTranslate - distanceToMove;
+      requestAnimationFrame(() => {
+        setTransform(currentTranslate);
+      });
+      touchStartX -= distanceToMove;
+      prevTranslate = currentTranslate;
+    }
   }
 }
 
