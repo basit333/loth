@@ -1,7 +1,7 @@
 // Select the tabs and product container elements
-const tabs = document.querySelectorAll(".best__sellers--tabs li");
-const products = document.querySelector(".best__sellers--products");
-const productContainer = document.querySelector(".best__sellers--product-container");
+const bestSellerTabs = document.querySelectorAll(".best__sellers--tabs li");
+const bestSellerProducts = document.querySelector(".best__sellers--products");
+const bestSellerProductContainer = document.querySelector(".best__sellers--product-container");
 
 // Define some variables to track the drag functionality
 let isDragging = false;
@@ -11,27 +11,27 @@ let prevTranslate = 0;
 let currentIndex = 0;
 
 // Add event listeners to the tabs
-tabs.forEach((tab, index) => {
+bestSellerTabs.forEach((tab, index) => {
   tab.addEventListener("click", () => activateTab(index));
 });
 
 // Add event listeners to the product container for touch and mouse events
-productContainer.addEventListener("touchstart", touchStart);
-productContainer.addEventListener("touchmove", touchMove);
-productContainer.addEventListener("touchend", touchEnd);
-productContainer.addEventListener("mousedown", dragStart);
-productContainer.addEventListener("mouseup", dragEnd);
-productContainer.addEventListener("mouseleave", dragEnd);
-productContainer.addEventListener("mousemove", drag);
+bestSellerProductContainer.addEventListener("touchstart", touchStart);
+bestSellerProductContainer.addEventListener("touchmove", touchMove);
+bestSellerProductContainer.addEventListener("touchend", touchEnd);
+bestSellerProductContainer.addEventListener("mousedown", dragStart);
+bestSellerProductContainer.addEventListener("mouseup", dragEnd);
+bestSellerProductContainer.addEventListener("mouseleave", dragEnd);
+bestSellerProductContainer.addEventListener("mousemove", drag);
 
 // Function to activate the selected tab
 function activateTab(index) {
   currentIndex = index;
   const activeTab = document.querySelector(".best__sellers--tabs li.active");
   activeTab.classList.remove("active");
-  tabs[currentIndex].classList.add("active");
+  bestSellerTabs[currentIndex].classList.add("active");
 
-  const productWidth = products.children[0].offsetWidth;
+  const productWidth = bestSellerProducts.children[0].offsetWidth;
   prevTranslate = currentTranslate;
   currentTranslate = -1 * index * productWidth;
   setTransform(currentTranslate);
@@ -49,7 +49,7 @@ function dragStart(event) {
   // Update prevTranslate to the current translate value
   prevTranslate = currentTranslate;
   // Calculate the current index based on the current translate position and product width
-  const productWidth = products.children[0].offsetWidth;
+  const productWidth = bestSellerProducts.children[0].offsetWidth;
   const newIndex = Math.round(-prevTranslate / productWidth);
   // Set the currentTranslate to the start position of the current product
   currentTranslate = -1 * newIndex * productWidth;
@@ -62,7 +62,7 @@ function dragEnd(event) {
   isDragging = false;
 
   // Calculate the final translate position based on the current index and product width
-  const productWidth = products.children[0].offsetWidth;
+  const productWidth = bestSellerProducts.children[0].offsetWidth;
   const finalTranslate = -1 * currentIndex * productWidth;
 
   // Set the currentTranslate to the final translate position
@@ -82,9 +82,9 @@ function drag(event) {
     }
 
     const diff = currentPos - startPos;
-    const productWidth = products.children[0].offsetWidth;
+    const productWidth = bestSellerProducts.children[0].offsetWidth;
 
-    if (prevTranslate + diff <= 0 && prevTranslate + diff >= -(products.children.length - 1) * productWidth) {
+    if (prevTranslate + diff <= 0 && prevTranslate + diff >= -(bestSellerProducts.children.length - 1) * productWidth) {
       currentTranslate = prevTranslate + diff;
       requestAnimationFrame(() => {
         setTransform(currentTranslate);
@@ -92,38 +92,6 @@ function drag(event) {
     }
   }
 }
-
-// // // Functions to handle the touch events
-// function touchStart(event) {
-//   startPos = event.touches[0].clientX;
-// }
-
-// function touchMove(event) {
-//   const currentPos = event.touches[0].clientX;
-//   const diff = currentPos - startPos;
-//   const productWidth = products.children[0].offsetWidth;
-//   const moveAmount = productWidth / 2; // adjust the speed by changing the number
-
-//   if (diff > moveAmount && prevTranslate + productWidth <= 0) {
-//     currentTranslate = prevTranslate + productWidth;
-//     requestAnimationFrame(() => {
-//       setTransform(currentTranslate);
-//     });
-//     startPos = currentPos;
-//     prevTranslate = currentTranslate;
-//   } else if (diff < -moveAmount && prevTranslate - productWidth >= -(products.children.length - 1) * productWidth) {
-//     currentTranslate = prevTranslate - productWidth;
-//     requestAnimationFrame(() => {
-//       setTransform(currentTranslate);
-//     });
-//     startPos = currentPos;
-//     prevTranslate = currentTranslate;
-//   }
-// }
-
-// function touchEnd() {
-//   prevTranslate = currentTranslate;
-// }
 
 // Functions to handle the touch events
 let touchStartX = 0;
@@ -136,7 +104,7 @@ function touchStart(event) {
 function touchMove(event) {
   const currentPos = event.touches[0].clientX;
   const diff = currentPos - touchStartX;
-  const productWidth = products.children[0].offsetWidth;
+  const productWidth = bestSellerProducts.children[0].offsetWidth;
 
   if (diff > 0) {
     const numProductsToMove = Math.floor((diff + productWidth / 2) / productWidth);
@@ -152,7 +120,7 @@ function touchMove(event) {
   } else if (diff < 0) {
     const numProductsToMove = Math.floor((Math.abs(diff) + productWidth / 2) / productWidth);
     const distanceToMove = numProductsToMove * productWidth;
-    if (prevTranslate - distanceToMove >= -(products.children.length - 1) * productWidth) {
+    if (prevTranslate - distanceToMove >= -(bestSellerProducts.children.length - 1) * productWidth) {
       currentTranslate = prevTranslate - distanceToMove;
       requestAnimationFrame(() => {
         setTransform(currentTranslate);
@@ -169,10 +137,10 @@ function touchEnd() {
 
 // Function to update the transform property of the products element
 function setTransform(translate) {
-  products.style.transform = `translateX(${translate}px)`;
+  bestSellerProducts.style.transform = `translateX(${translate}px)`;
 
   // Check if the current index should be updated
-  const productWidth = products.children[0].offsetWidth;
+  const productWidth = bestSellerProducts.children[0].offsetWidth;
   const newIndex = Math.round(-translate / productWidth);
   const activeTab = document.querySelector(".best__sellers--tabs li.active");
 
@@ -185,7 +153,7 @@ function setTransform(translate) {
     }
 
     // Add the active class to the new active tab
-    const newTab = tabs[currentIndex];
+    const newTab = bestSellerTabs[currentIndex];
     if (newTab) {
       newTab.classList.add("active");
     }
