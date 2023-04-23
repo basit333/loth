@@ -138,8 +138,8 @@ function touchMove(event) {
   const diff = currentPos - touchStartX;
   const productWidth = products.children[0].offsetWidth;
 
-  if (diff > productWidth) {
-    const numProductsToMove = Math.floor(diff / productWidth);
+  if (diff > 0) {
+    const numProductsToMove = Math.floor((diff + productWidth / 2) / productWidth);
     const distanceToMove = numProductsToMove * productWidth;
     if (prevTranslate + distanceToMove <= 0) {
       currentTranslate = prevTranslate + distanceToMove;
@@ -149,8 +149,8 @@ function touchMove(event) {
       touchStartX += distanceToMove;
       prevTranslate = currentTranslate;
     }
-  } else if (diff < -productWidth) {
-    const numProductsToMove = Math.floor(Math.abs(diff) / productWidth);
+  } else if (diff < 0) {
+    const numProductsToMove = Math.floor((Math.abs(diff) + productWidth / 2) / productWidth);
     const distanceToMove = numProductsToMove * productWidth;
     if (prevTranslate - distanceToMove >= -(products.children.length - 1) * productWidth) {
       currentTranslate = prevTranslate - distanceToMove;
