@@ -46,20 +46,6 @@ function dragStart(event) {
     startPos = event.clientX;
   }
   isDragging = true;
-
-  // Update prevTranslate to the current translate value
-  prevTranslate = currentTranslate;
-}
-
-// Function to start the drag functionality
-function dragStart(event) {
-  event.preventDefault();
-  if (event.type === "touchstart") {
-    startPos = event.touches[0].clientX;
-  } else {
-    startPos = event.clientX;
-  }
-  isDragging = true;
   // Update prevTranslate to the current translate value
   prevTranslate = currentTranslate;
   // Calculate the current index based on the current translate position and product width
@@ -109,12 +95,10 @@ function drag(event) {
 
 // Functions to handle the touch events
 function touchStart(event) {
-  event.preventDefault();
   startPos = event.touches[0].clientX;
 }
 
 function touchMove(event) {
-  event.preventDefault();
   const currentPos = event.touches[0].clientX;
   const diff = currentPos - startPos;
   const productWidth = products.children[0].offsetWidth;
@@ -137,8 +121,7 @@ function touchMove(event) {
   }
 }
 
-function touchEnd(event) {
-  event.preventDefault();
+function touchEnd() {
   prevTranslate = currentTranslate;
 }
 
