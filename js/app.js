@@ -29,3 +29,16 @@ navOpenBtn.addEventListener("click", function () {
 navCloseBtn.addEventListener("click", function () {
   navMobileMenu.classList.remove("mobile__nav--links-open");
 });
+
+// Cart Variables
+const cartBtn = document.querySelector(".nav__cart--btn");
+const cartContainer = document.querySelector(".nav__cart--container");
+const cartCloseBtn = document.querySelector(".nav__cart--btn-close");
+
+cartBtn.addEventListener("click", function () {
+  cartContainer.classList.add("nav__cart--container-open");
+});
+
+cartCloseBtn.addEventListener("click", function () {
+  cartContainer.classList.remove("nav__cart--container-open");
+});
