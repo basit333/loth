@@ -1564,6 +1564,12 @@ body {
   }
 }
 
+@media (max-width: 665px) {
+  .news__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 @media (max-width: 644px) {
   .navbar__container {
     padding: 10px 20px 38px 20px;
@@ -1661,5 +1667,52 @@ body {
   .service__card {
     max-width: 100%;
     width: 100%;
+  }
+
+  .cta {
+    padding: 0;
+  }
+
+  .cta__container {
+    max-width: 100%;
+  }
+
+  .cta__title {
+    text-align: center;
+  }
+
+  .our__promise--container {
+    padding: 0 20px;
+  }
+
+  .feature__product--content {
+    padding: 0 20px 50px 20px;
+  }
+
+  .shop__look--product-card {
+    max-width: 300px;
+  }
+
+  .shop__look--product-img-box {
+    width: 300px;
+    height: 400px;
+  }
+
+  .brand__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .modern__content {
+    padding: 0 20px;
+  }
+
+  .social__subtext {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .footer {
+    padding: 0 20px;
   }
 }
