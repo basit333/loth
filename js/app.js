@@ -42,3 +42,64 @@ cartBtn.addEventListener("click", function () {
 cartCloseBtn.addEventListener("click", function () {
   cartContainer.classList.remove("nav__cart--container-open");
 });
+
+// Cart input
+// Get the input element and buttons
+const cartInput = document.querySelector(".nav__cart--container-product-input");
+const cartMinusBtn = document.querySelector(".nav__cart--container-product-input-minus-btn");
+const cartPlusBtn = document.querySelector(".nav__cart--container-product-input-plus-btn");
+
+// Add click event listeners to the buttons
+cartMinusBtn.addEventListener("click", decreaseValue);
+cartPlusBtn.addEventListener("click", increaseValue);
+
+// Function to decrease the input value
+function decreaseValue() {
+  let value = parseInt(cartInput.value);
+  if (value > cartInput.min) {
+    value--;
+    cartInput.value = value;
+  }
+}
+
+// Function to increase the input value
+function increaseValue() {
+  let value = parseInt(cartInput.value);
+  if (value < cartInput.max) {
+    value++;
+    cartInput.value = value;
+  }
+}
+
+// FAQ's
+const faqs = document.querySelectorAll(".faq");
+
+faqs.forEach((question) => {
+  const faqImgPlus = question.querySelector(".faq-plus");
+  const faqImgMinus = question.querySelector(".faq-minus");
+  const answerBox = question.nextElementSibling;
+
+  question.addEventListener("click", function () {
+    const isOpen = answerBox.classList.contains("faq-answer-box-open");
+
+    // Close all other answer boxes
+    faqs.forEach((otherQuestion) => {
+      if (otherQuestion !== question) {
+        const otherAnswerBox = otherQuestion.nextElementSibling;
+        const otherFaqImgPlus = otherQuestion.querySelector(".faq-plus");
+        const otherFaqImgMinus = otherQuestion.querySelector(".faq-minus");
+
+        otherAnswerBox.classList.remove("faq-answer-box-open");
+        otherFaqImgPlus.style.display = "block";
+        otherFaqImgMinus.style.display = "none";
+      }
+    });
+
+    // Toggle current answer box
+    answerBox.classList.toggle("faq-answer-box-open", !isOpen);
+
+    // Update icon
+    faqImgPlus.style.display = isOpen ? "block" : "none";
+    faqImgMinus.style.display = isOpen ? "none" : "block";
+  });
+});
