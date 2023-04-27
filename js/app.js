@@ -103,3 +103,28 @@ faqs.forEach((question) => {
     faqImgMinus.style.display = isOpen ? "none" : "block";
   });
 });
+
+/*
+------------------------------
+ Product Details Page Tab
+------------------------------
+*/
+
+const productTabs = document.querySelectorAll(".product__details-tab");
+const productTabContent = document.querySelectorAll(".product__details-tab-content");
+
+productTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    // Remove active class from all tabs and tab content
+    productTabs.forEach((tab) => tab.classList.remove("active"));
+    productTabContent.forEach((content) => content.classList.remove("active"));
+
+    // Add active class to the clicked tab
+    tab.classList.add("active");
+
+    // Show the corresponding tab content with opacity animation
+    const tabId = tab.getAttribute("data-tab");
+    const activeTabContent = document.getElementById(tabId);
+    activeTabContent.classList.add("active");
+  });
+});

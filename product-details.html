@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Loth">
+    <meta name="description" content="Description for website goes here">
+    <title>Loth</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Main Container -->
+    <main class="main-container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar__container">
+          <!-- Nav Links -->
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Products</a>
+            </li>
+          </ul>
+          <button class="nav__menu--btn-open">
+            <img src="./images/hamburger.png" alt="hamburger icon" class="nav__menu--btn-open-img">
+          </button>
+          <!-- Mobile Nav Links -->
+          <div class="mobile__nav--links">
+            <ul class="mobile__nav--items">
+              <li class="mobile__nav--item">
+                <a href="#" class="mobile__nav--item-link">Home</a>
+              </li>
+              <li class="mobile__nav--item">
+                <a href="#" class="mobile__nav--item-link">Products</a>
+              </li>
+            </ul>
+            <button class="nav__menu--btn-close">
+              <img src="./images/close-icon.png" alt="menu close" class="nav__menu--btn-close-img">
+            </button>
+          </div>
+          <!-- Nav Logo -->
+          <div class="nav__logo--box">
+            <a href="./home.html" class="nav__logo--box-link">
+              <img src="./images/nav-logo.png" alt="logo" class="nav__logo">
+            </a>
+          </div>
+          <div class="nav__btns">
+            <!-- Cart Btn -->
+            <button class="nav__cart--btn">
+              <img src="./images/cart.png" alt="cart" class="nav__cart--btn-img">
+            </button>
+            <div class="nav__cart--container">
+              <button class="nav__cart--btn-close">
+                <img src="./images/close-icon.png" alt="close" class="nav__cart--btn-close-img">
+              </button>
+              <div class="nav__cart--container-content">
+                <h4 class="nav__cart--container-title">Cart</h4>
+                <div class="nav__cart--progress-content">
+                  <p class="nav__cart--progress-text">Congratulations! Your order qualifies for free shipping</p>
+                  <div class="nav__cart--progress-bar">
+                    <div class="nav__cart--progress-bar-inner"></div>
+                  </div>
+                </div>
+
+                <div class="nav__cart--container-product-container">
+                  <div class="nav__cart--container-product-img-box">
+                    <img src="./images/cart-product-img.png" alt="ring" class="nav__cart--container-product-img">
+                  </div>
+                  <div class="nav__cart--container-product-details">
+                    <h4 class="nav__cart--container-product-details-title">Elsworth Necklace in Gold</h4>
+                    <span class="nav__cart--container-product-details-new-price">$40.00</span>
+                    <span class="nav__cart--container-product-details-old-price">$90.00</span>
+                    <div class="nav__cart--container-product-input-box">
+                      <input type="number" class="nav__cart--container-product-input" min="1" max="100" value="1">
+                      <button class="nav__cart--container-product-input-minus-btn">&#8722;</button>
+                      <button class="nav__cart--container-product-input-plus-btn">&#43;</button>
+                    </div>
+                  </div>
+                  <button class="nav__cart--container-product-remove-btn">
+                    <img src="./images/close-icon.png" alt="close" class="nav__cart--container-product-remove-btn-img">
+                  </button>
+                </div>
+
+              </div>
+
+              <div class="nav__cart--container-footer-content">
+                <div class="nav__cart--container-footer-faqs">
+
+                  <div class="nav__cart--container-footer-faq-wrapper">
+
+                    <div class="nav__cart--container-footer-faq faq">
+                      <h2 class="nav__cart--container-footer-faq-question faq-question">
+                        Pair with
+                      </h2>
+                      <img src="./images/plus-icon.png" alt="faq open"
+                        class="nav__cart--container-footer-faq-plus faq-plus">
+
+                      <img src="./images/minus-icon.png" alt="faq close"
+                        class="nav__cart--container-footer-faq-minus faq-minus">
+                    </div>
+                    <div class="nav__cart--container-footer-faq-answer-box faq-answer-box-with-bg-color faq-answer-box">
+                      <div class="nav__cart--container-footer-faq-answer faq-answer">
+                        <div class="nav__cart--container-faq-answer-product-img-box">
+                          <img src="./images/image11.png" alt="ring"
+                            class="nav__cart--container-faq-answer-product-img">
+                        </div>
+                        <div class="nav__cart--container-footer-faq-answer-details">
+                          <h4 class="nav__cart--container-footer-faq-answer-details-title">Elsworth Necklace in Gold
+                          </h4>
+                          <span class="nav__cart--container-footer-faq-answer-details-price">$40.00</span>
+                          <button class="nav__cart--container-footer-faq-answer-details-cart-btn">
+                            <img src="./images/cart.png" alt="shopping cart"
+                              class="nav__cart--container-footer-faq-answer-details-cart-btn-img">
+                          </button>
+                        </div>
+                        <button class="nav__cart--container-footer-faq-answer-remove-btn">
+                          <img src="./images/close-icon.png" alt="close"
+                            class="nav__cart--container-footer-faq-answer-remove-btn-img">
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="nav__cart--container-footer-faq-wrapper">
+
+                    <div class="nav__cart--container-footer-faq faq">
+                      <h2 class="nav__cart--container-footer-faq-question faq-question">
+                        Is this a gift?
+                      </h2>
+                      <img src="./images/plus-icon.png" alt="faq open"
+                        class="nav__cart--container-footer-faq-plus faq-plus">
+
+                      <img src="./images/minus-icon.png" alt="faq close"
+                        class="nav__cart--container-footer-faq-minus faq-minus">
+                    </div>
+                    <div class="nav__cart--container-footer-faq-answer-box faq-answer-box">
+                      <p class="nav__cart--container-footer-faq-answer faq-answer">Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Autem sequi quod esse ut eaque tenetur nemo odit voluptatibus
+                        ipsum amet?</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="nav__cart--container-footer-subtotal-wrapper">
+                  <h3 class="nav__cart--container-footer-subtotal-title">SUBTOTAL</h3>
+                  <span class="nav__cart--container-footer-subtotal-price">$40.00 CAD</span>
+                </div>
+
+                <button class="nav__cart--container-footer-shipping-btn">
+                  <img src="./images/cart-white.png" alt="cart" class="nav__cart--container-footer-cart-img">
+                  Continue to shipping
+                </button>
+
+                <p class="nav__cart--container-footer-shipping-discription">
+                  Shipping, taxes, and discount codes are calculated checkout
+                </p>
+              </div>
+            </div>
+            <!-- Login Btn -->
+            <div class="navbar__login--btn">
+              <button class="navbar__login--btn-dropbtn"><img src="./images/user.png" alt="user login"
+                  class="navbar__login--btn-img"></button>
+              <div class="navbar__login--btn-dropbtn-content">
+                <a href="#">Login</a>
+                <a href="#">Signup</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="product__details--header">
+        <div class="product__details--container">
+          <div class="product__details--container-left">
+            <!-- Swiper -->
+            <div class="product__details--product-container swiper mySwiper">
+              <div class="swiper-wrapper">
+
+                <div class="product__details--item swiper-slide">
+                  <div class="product__details--item-img-box">
+                    <img src="./images/image11.png" alt="product" class="product__details--item-img">
+                  </div>
+                </div>
+
+                <div class="product__details--item swiper-slide">
+                  <div class="product__details--item-img-box">
+                    <img src="./images/image16.png" alt="product" class="product__details--item-img">
+                  </div>
+                </div>
+
+                <div class="product__details--item swiper-slide">
+                  <div class="product__details--item-img-box">
+                    <img src="./images/necklace.png" alt="product" class="product__details--item-img">
+                  </div>
+                </div>
+
+                <div class="product__details--item swiper-slide">
+                  <div class="product__details--item-img-box">
+                    <img src="./images/earring.png" alt="product" class="product__details--item-img">
+                  </div>
+                </div>
+
+              </div>
+              <div class="product__details--btn-next swiper-button-next"></div>
+              <div class="product__details--btn-prev swiper-button-prev"></div>
+              <div class="product__details--pagination swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="product__details--container-right">
+
+            <div class="product__details--container-right-pagination">
+              <a href="#" class="product__details-pagination-link">Home</a>
+              <span class="product__details-pagination-bullet"></span>
+              <a href="#" class="product__details-pagination-link">Pearl Swirl Studs</a>
+            </div>
+
+            <div class="product__details-add-cart-wrapper">
+              <div class="product__details-add-cart-top">
+                <h2 class="product__details-add-cart-title">Pearl Swirl Studs</h2>
+                <span class="product__details-add-cart-badge">Bespoke</span>
+                <div class="product__details-add-cart-rating">
+                  <img src="./images/star-icon.png" alt="" class="product__details-add-cart-rating-img">
+                  <h3 class="product__details-add-cart-ratings">4.5</h3>
+                </div>
+              </div>
+
+              <h4 class="product__details-add-cart-price">$75.00</h4>
+
+              <form action="#" class="product__details-add-cart-form">
+                <input type="number" name="number" min="1" max="100" value="1"
+                  class="product__details-add-cart-form-input">
+                <button class="product__details-add-cart-form-btn">Add to cart</button>
+              </form>
+
+            </div>
+
+            <div class="product__details-tab-container">
+
+              <div class="product__details-tabs">
+                <div class="product__details-tab active" data-tab="tab1">Description</div>
+                <div class="product__details-tab" data-tab="tab2">Tab</div>
+                <div class="product__details-tab" data-tab="tab3">Info</div>
+              </div>
+
+              <div class="tab-content">
+                <div id="tab1" class="product__details-tab-content active">
+                  <p class="product__details-tab-content-text">Wolf Circus is a line of demi-fine jewelry thoughtfully
+                    designed and hand fabricated in Vancouver,
+                    BC.</p>
+                  <p class="product__details-tab-content-text">The company is run entirely by women and aims to inspire
+                    others to embrace their confidence during
+                    their daily hustle.</p>
+                  <p class="product__details-tab-content-text">Check out their products at <a href="#"
+                      class="product__details-tab-content-link">Wolf
+                      Circus
+                      Jewelry</a>
+                  </p>
+                </div>
+                <div id="tab2" class="product__details-tab-content">
+                  <p class="product__details-tab-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Omnis eius a fuga magni dolorem laborum officia voluptate repellendus pariatur velit.</p>
+                  <p class="product__details-tab-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Omnis eius a fuga magni dolorem laborum officia voluptate repellendus pariatur velit.</p>
+                  <p class="product__details-tab-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Omnis eius a fuga magni dolorem laborum officia voluptate repellendus pariatur velit.</a>
+                  </p>
+                </div>
+                <div id="tab3" class="product__details-tab-content">
+                  <p class="product__details-tab-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Omnis eius a fuga magni dolorem laborum officia voluptate repellendus pariatur velit.</p>
+                  <p class="product__details-tab-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Omnis eius a fuga magni dolorem laborum officia voluptate repellendus pariatur velit.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="product__details--info-container">
+
+              <div class="product__details--info-item">
+                <img src="./images/return-icon.png" alt="return" class="product__details--info-item-img">
+                <p class="product__details--info-item-text">
+                  Free 30 Days Returns
+                </p>
+              </div>
+
+              <div class="product__details--info-item">
+                <img src="./images/transport-icon.png" alt="shipping" class="product__details--info-item-img">
+                <p class="product__details--info-item-text">
+                  Free shipping on orders over $100
+                </p>
+              </div>
+
+              <div class="product__details--info-item">
+                <img src="./images/warranty-icon.png" alt="warranty" class="product__details--info-item-img">
+                <p class="product__details--info-item-text">
+                  1 year warranty
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="product__details--support-chat-container">
+              <div class="product__details--support-chat-title-box">
+                <img src="./images/chat.png" alt="chat" class="product__details--support-chat-title-img">
+                <p class="product__details--support-chat-title">
+                  We Support Custom Orders
+                </p>
+              </div>
+              <p class="product__details--support-chat-text">
+                Please send us an email with all your requirements and make your custom order
+              </p>
+              <a href="#" class="product__details--support-chat-link">
+                CustomOrders@Lothfinejewelry.com
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="product__details--faqs">
+
+        <div class="nav__cart--container-footer-faq-wrapper">
+
+          <div class="nav__cart--container-footer-faq faq">
+            <h2 class="nav__cart--container-footer-faq-question faq-question product__details--faq-question">
+              Care Instructions
+            </h2>
+            <img src="./images/plus-icon.png" alt="faq open" class="nav__cart--container-footer-faq-plus faq-plus"
+              style="display: block;">
+
+            <img src="./images/minus-icon.png" alt="faq close" class="nav__cart--container-footer-faq-minus faq-minus"
+              style="display: none;">
+          </div>
+          <div class="nav__cart--container-footer-faq-answer-box faq-answer-box">
+            <p class="nav__cart--container-footer-faq-answer faq-answer product__details--faq-answer">Lorem ipsum dolor
+              sit amet,
+              consectetur adipisicing elit. Autem sequi quod esse ut eaque tenetur nemo odit voluptatibus
+              ipsum amet?</p>
+          </div>
+
+        </div>
+
+        <div class="nav__cart--container-footer-faq-wrapper">
+
+          <div class="nav__cart--container-footer-faq faq">
+            <h2 class="nav__cart--container-footer-faq-question faq-question product__details--faq-question">
+              Shipping & Returns
+            </h2>
+            <img src="./images/plus-icon.png" alt="faq open" class="nav__cart--container-footer-faq-plus faq-plus"
+              style="display: block;">
+
+            <img src="./images/minus-icon.png" alt="faq close" class="nav__cart--container-footer-faq-minus faq-minus"
+              style="display: none;">
+          </div>
+          <div class="nav__cart--container-footer-faq-answer-box faq-answer-box">
+            <p class="nav__cart--container-footer-faq-answer faq-answer">Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Autem sequi quod esse ut eaque tenetur nemo odit voluptatibus
+              ipsum amet?</p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__top--container">
+          <div class="footer__about--content">
+            <h3 class="footer__about--title">About the Brand</h3>
+            <p class="footer__about--subtext">All products in this store are for demo purposes only. They have been
+              generously provided by Wolf Circus.</p>
+          </div>
+          <div class="footer__customer--content">
+            <h3 class="footer__customer--title">Customer Care</h3>
+            <ul class="footer__nav-container">
+              <li class="footer__nav--list">
+                <a href="#" class="footer__nav--link">Blog</a>
+              </li>
+              <li class="footer__nav--list">
+                <a href="#" class="footer__nav--link">About</a>
+              </li>
+              <li class="footer__nav--list">
+                <a href="#" class="footer__nav--link">FAQ</a>
+              </li>
+              <li class="footer__nav--list">
+                <a href="#" class="footer__nav--link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__bestsellers--content">
+            <h3 class="footer__bestsellers--title">Bestsellers</h3>
+            <ul class="footer__nav-container">
+              <li class="footer__nav--list">
+                <a href="#" class="footer__nav--link">Kyla Hoops</a>
+              </li>
+              <li class="footer__nav--list">
+                <a href="#" class="footer__nav--link">Amphora Necklace</a>
+              </li>
+              <li class="footer__nav--list">
+                <a href="#" class="footer__nav--link">Marcel Studs</a>
+              </li>
+              <li class="footer__nav--list">
+                <a href="#" class="footer__nav--link">Lunette Earrings</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__newsletter--content">
+            <h3 class="footer__newsletter--title">Newsletter</h3>
+            <p class="footer__newsletter--subtext">Subscribe to get special offers, free giveaways, and
+              once-in-a-lifetime deals.</p>
+            <form action="#" class="footer__newsletter--form">
+              <div class="footer__newsletter--input-container">
+                <label class="footer__newsletter--input-label" for="email-input" id="email-label">Email</label>
+                <input class="footer__newsletter--input" type="email" id="email-input">
+                <button class="footer__newsletter--input-btn">Join</button>
+                <p class="footer__newsletter--input-container-text">This site is protected by reCAPTCHA and the Google
+                  Privacy Policy and Terms of Service apply.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__bottom--container">
+          <div class="footer__dropdown--btns">
+            <div class="footer__select--dropdown">
+              <select>
+                <option value="english">EN</option>
+                <option value="spanish">SPA</option>
+                <option value="french">FR</option>
+              </select>
+              <div class="down__arrow--box">
+                <span class="footer__select--downarrow"></span>
+              </div>
+            </div>
+
+            <div class="footer__select--dropdown">
+              <select>
+                <option value="english">CAD</option>
+                <option value="spanish">EUR</option>
+                <option value="french">USD</option>
+              </select>
+              <div class="down__arrow--box">
+                <span class="footer__select--downarrow"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__copy--right">
+            <p class="footer__copy--right-text">© Loth 2023</p>
+          </div>
+
+          <div class="footer__bottom--navbar">
+            <ul class="footer__bottom--navbar-container">
+              <li class="footer__bottom--navbar-list">
+                <a href="#" class="footer__bottom--navbar-link">Shipping Policy</a>
+              </li>
+              <li class="footer__bottom--navbar-list">
+                <a href="#" class="footer__bottom--navbar-link">Refund Policy</a>
+              </li>
+              <li class="footer__bottom--navbar-list">
+                <a href="#" class="footer__bottom--navbar-link">Privacy Policy</a>
+              </li>
+              <li class="footer__bottom--navbar-list">
+                <a href="#" class="footer__bottom--navbar-link">Terms of Service</a>
+              </li>
+              <li class="footer__bottom--navbar-list">
+                <a href="#" class="footer__bottom--navbar-link">Powered by Shopify</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__bottom--payment-container">
+            <div class="footer__bottom--payment-img-box">
+              <img src="./images/payment-1.png" alt="visa card" class="footer__bottom--payment-img">
+            </div>
+            <div class="footer__bottom--payment-img-box">
+              <img src="./images/payment-2.png" alt="master card" class="footer__bottom--payment-img">
+            </div>
+            <div class="footer__bottom--payment-img-box">
+              <img src="./images/payment-3.png" alt="amex card" class="footer__bottom--payment-img">
+            </div>
+            <div class="footer__bottom--payment-img-box">
+              <img src="./images/payment-4.png" alt="paypal card" class="footer__bottom--payment-img">
+            </div>
+            <div class="footer__bottom--payment-img-box">
+              <img src="./images/payment-5.png" alt="diners club card" class="footer__bottom--payment-img">
+            </div>
+            <div class="footer__bottom--payment-img-box">
+              <img src="./images/payment-6.png" alt="discover card" class="footer__bottom--payment-img">
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="./js/app.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/swiper-slider.js"></script>
+
+  </body>
+
+</html>
