@@ -2154,3 +2154,10 @@ body {
     max-width: 144px;
   }
 }
+
+@media (max-width: 422px) {
+  .nav__cart--container-footer-faq-answer-remove-btn {
+    top: 6px;
+    right: 5px;
+  }
+}
