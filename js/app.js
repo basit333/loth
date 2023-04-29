@@ -1,9 +1,17 @@
-// Footer Input Variables
+/*
+------------------------------
+    Footer Input Variables
+------------------------------
+*/
 // Get the input and label elements
 const footerEmailInput = document.getElementById("email-input");
 const footerEmailLabel = document.getElementById("email-label");
 
-// Footer Input
+/*
+------------------------------
+        Footer Input
+------------------------------
+*/
 // Add an event listener to the input field
 footerEmailInput.addEventListener("input", function () {
   // Check if the input field has a value
@@ -16,7 +24,11 @@ footerEmailInput.addEventListener("input", function () {
   }
 });
 
-// Mobile Navbar
+/*
+------------------------------
+        Mobile Navbar
+------------------------------
+*/
 // Mobile Navbar Variables
 const navOpenBtn = document.querySelector(".nav__menu--btn-open");
 const navCloseBtn = document.querySelector(".nav__menu--btn-close");
@@ -30,7 +42,11 @@ navCloseBtn.addEventListener("click", function () {
   navMobileMenu.classList.remove("mobile__nav--links-open");
 });
 
-// Cart Variables
+/*
+------------------------------
+        Cart Variables
+------------------------------
+*/
 const cartBtn = document.querySelector(".nav__cart--btn");
 const cartContainer = document.querySelector(".nav__cart--container");
 const cartCloseBtn = document.querySelector(".nav__cart--btn-close");
@@ -43,7 +59,11 @@ cartCloseBtn.addEventListener("click", function () {
   cartContainer.classList.remove("nav__cart--container-open");
 });
 
-// Cart input
+/*
+------------------------------
+          Cart input
+------------------------------
+*/
 // Get the input element and buttons
 const cartInput = document.querySelector(".nav__cart--container-product-input");
 const cartMinusBtn = document.querySelector(".nav__cart--container-product-input-minus-btn");
@@ -71,7 +91,11 @@ function increaseValue() {
   }
 }
 
-// FAQ's
+/*
+------------------------------
+            FAQ's
+------------------------------
+*/
 const faqs = document.querySelectorAll(".faq");
 
 faqs.forEach((question) => {
@@ -109,7 +133,6 @@ faqs.forEach((question) => {
  Product Details Page Tab
 ------------------------------
 */
-
 const productTabs = document.querySelectorAll(".product__details-tab");
 const productTabContent = document.querySelectorAll(".product__details-tab-content");
 
@@ -126,5 +149,53 @@ productTabs.forEach((tab) => {
     const tabId = tab.getAttribute("data-tab");
     const activeTabContent = document.getElementById(tabId);
     activeTabContent.classList.add("active");
+  });
+});
+
+/*
+------------------------------
+ Product Details Page Related/Recent Tab
+------------------------------
+*/
+const productTabsItem = document.querySelectorAll(".product__details-tab-item");
+const productTabContainer = document.querySelectorAll(".product__details-tab-container");
+
+productTabsItem.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    // Remove active class from all tabs and tab content
+    productTabsItem.forEach((tab) => tab.classList.remove("product__details-tab-item-active"));
+    productTabContainer.forEach((content) => content.classList.remove("product__details-tab-container-active"));
+
+    // Add active class to the clicked tab
+    tab.classList.add("product__details-tab-item-active");
+
+    // Show the corresponding tab content with opacity animation
+    const tabId = tab.getAttribute("data-tab");
+    const activeTabContent = document.getElementById(tabId);
+    activeTabContent.classList.add("product__details-tab-container-active");
+  });
+});
+
+/*
+---------------------------------
+ Product Details Page Colors Btns
+---------------------------------
+*/
+const productCardContainers = document.querySelectorAll(".product__details-tab-product-card");
+
+productCardContainers.forEach((container) => {
+  const checkBoxBtns = container.querySelectorAll(".checkbox-btn");
+
+  checkBoxBtns.forEach((checkboxBtn) => {
+    checkboxBtn.addEventListener("click", function (event) {
+      event.stopPropagation();
+
+      // Remove active class from all checkboxes within the same card
+      const checkboxes = container.querySelectorAll(".checkbox-btn");
+      checkboxes.forEach((cb) => cb.classList.remove("checkbox-btn-active"));
+
+      // Add active class to the clicked checkbox
+      this.classList.add("checkbox-btn-active");
+    });
   });
 });
