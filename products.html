@@ -8,6 +8,10 @@
     <meta name="keywords" content="Loth">
     <meta name="description" content="Description for website goes here">
     <title>Loth</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -184,364 +188,190 @@
         </div>
       </nav>
 
-      <!-- Section Hero -->
-      <section class="hero">
-        <div class="hero__container">
-          <div class="hero__content">
-            <h1 class="hero__title">Elegance with an Attitude
-              Our signature stud cut</h1>
-            <p class="hero__subtitle">Our latest collection now available</p>
-            <a href="#" class="hero__link--btn">Shop the collection</a>
-          </div>
-        </div>
+      <!-- Products Page Header -->
+      <section class="products__page--header">
+        <h1 class="products__page--title">Best sellers</h1>
+        <p class="products__page--subtext">Our most popular earrings, bracelets, and necklaces at our best prices.</p>
       </section>
 
-      <!-- Section Favorites -->
-      <section class="favorites">
-        <div class="favorites__top--content">
-          <h3 class="favorites__top--subtitle">Essentials Collection</h3>
-          <h1 class="favorites__top--title">Shop Our Favorites</h1>
-          <p class="favorites__top--text">Fine jewelry for every day. Always ethically sourced and always fashionable.
-          </p>
-        </div>
-        <div class="favorites__bottom--content">
-          <div class="favorites__bottom--card">
-            <div class="favorites__card--img-box">
-              <img src="./images/earring.png" alt="earring" class="favorites__card--img">
-            </div>
-            <div class="favorites__card--content">
-              <h3 class="favorites__card--title">Statement Making Styles <br>
-                For evening and beyond</h3>
-              <a href="./product-details.html" class="favorites__card--link">Shop Earrings</a>
-            </div>
-          </div>
-
-          <div class="favorites__bottom--card">
-            <div class="favorites__card--img-box">
-              <img src="./images/image 5.png" alt="earring" class="favorites__card--img">
-            </div>
-            <div class="favorites__card--content">
-              <h3 class="favorites__card--title">Layerable Luxuries <br>
-                Our floating bezel collection</h3>
-              <a href="./product-details.html" class="favorites__card--link">Shop Classics</a>
-            </div>
-          </div>
-
-          <div class="favorites__bottom--card">
-            <div class="favorites__card--img-box">
-              <img src="./images/image 6.png" alt="earring" class="favorites__card--img">
-            </div>
-            <div class="favorites__card--content">
-              <h3 class="favorites__card--title">One of a Kind Creations <br>
-                Nature’s finest gemstones in exclusive <br> cuts, colors and styles</h3>
-              <a href="./product-details.html" class="favorites__card--link">Shop now</a>
-            </div>
+      <!-- Products Page Filters/Sort By -->
+      <section class="products__search--container">
+        <div class="products__search--btns">
+          <button class="products__search--filters-btn">
+            <img src="./images/filter.png" alt="" class="products__search--filters-img-filter">
+            <span class="products__search--filters-btn-text">
+              Open Filters
+            </span>
+            <img src="./images/down-arrow.png" alt="" class="products__search--filters-img-down-arrow">
+          </button>
+          <div class="products__search--sort-btn-container">
+            <select class="products__search--sort-btn">
+              <option class="products__search--sort-item">Sort by</option>
+              <option class="products__search--sort-item">Featured</option>
+              <option class="products__search--sort-item">Best selling</option>
+              <option class="products__search--sort-item">Alphabetically, A-Z</option>
+              <option class="products__search--sort-item">Alphabetically, Z-A</option>
+              <option class="products__search--sort-item">Price, low to high</option>
+              <option class="products__search--sort-item">Price, high to low</option>
+              <option class="products__search--sort-item">Date, old to new</option>
+              <option class="products__search--sort-item">Date, new to old</option>
+            </select>
+            <img src="./images/down-arrow.png" alt="" class="products__search--sort-img-down-arrow">
           </div>
         </div>
+        <!-- Sort By Content -->
+
       </section>
 
-      <!-- Section CTA -->
-      <section class="cta">
-        <div class="cta__container">
-          <h1 class="cta__title">Get 20% off all sale items</h1>
-          <p class="cta__subtext">Use code EXTRA at checkout</p>
-          <a href="#" class="cta__link--btn">Shop Now</a>
+      <!-- Products Main Container -->
+      <section class="products">
+        <div class="products__search--filters-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam provident voluptatem, dignissimos adipisci
+            excepturi consequatur enim voluptatibus minus nihil at accusamus perferendis fuga voluptas recusandae autem,
+            deleniti eveniet ipsum suscipit.</p>
         </div>
-      </section>
+        <div class="products__container--wrapper">
+          <div class="products__container">
+            <div class="products__feature--card">
+              <img src="./images/feature-product.png" alt="feature product" class="products__feature--card-img">
+            </div>
 
-      <!-- Section Best Sellers -->
-      <section class="best__sellers">
-        <h3 class="best__sellers--title">Best Sellers</h3>
-
-        <div class="best__sellers--tab-container">
-          <ul class="best__sellers--tabs">
-            <li class="active">Earrings</li>
-            <li>Rings</li>
-            <li>Necklaces</li>
-            <li>bracelets</li>
-          </ul>
-        </div>
-
-        <div class="product-container best__sellers--product-container">
-          <div class="products best__sellers--products">
-            <div class="product best__sellers--product active">
-              <div class="best__sellers--product-img-box">
-                <img src="./images/product-earrings.png" alt="earring" class="best__sellers--product-img">
+            <div class="products__container--card">
+              <div class="products__main--card-img-wrapper">
+                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
               </div>
-              <div class="best__sellers--product-shop-content">
-                <p class="best__sellers--product-shop-description">14k solid gold essentials, sterling silver statement
-                  pieces
-                  and more.</p>
-                <a href="#" class="best__sellers--product-shop-btn">Shop Rings</a>
+              <div class="products__main--card-details">
+                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
+                <div class="products__main--card-price-wrapper">
+                  <h4 class="products__main--card-sale-price">$40.00</h4>
+                  <h4 class="products__main--card-old-price">$98.00</h4>
+                </div>
+                <span class="products__main--card-variants">
+                  2 colors
+                </span>
+              </div>
+              <span class="products__main--card-sale-badge">Sale</span>
+            </div>
+
+            <div class="products__container--card">
+              <div class="products__main--card-img-wrapper">
+                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
+              </div>
+              <div class="products__main--card-details">
+                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
+                <div class="products__main--card-price-wrapper">
+                  <h4 class="products__main--card-sale-price">$40.00</h4>
+                  <h4 class="products__main--card-old-price">$98.00</h4>
+                </div>
               </div>
             </div>
 
-            <a href="#" class="product best__sellers--product">
-              <div class="best__sellers--product-img-box">
-                <img src="./images/ring.png" alt="ring" class="best__sellers--product-img">
+            <div class="products__container--card">
+              <div class="products__main--card-img-wrapper">
+                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
               </div>
-              <div class="best__sellers--product-content">
-                <h3 class="best__sellers--product-title">Ophidian Signet Ring in Gold</h3>
-                <span class="best__sellers--product-price">$145.00</span>
-                <span class="best__sellers--product-variants">2 colors</span>
+              <div class="products__main--card-details">
+                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
+                <div class="products__main--card-price-wrapper">
+                  <h4 class="products__main--card-price">$40.00</h4>
+                </div>
+                <span class="products__main--card-variants">
+                  2 colors
+                </span>
               </div>
-            </a>
+            </div>
 
-            <a href="#" class="product best__sellers--product">
-              <div class="best__sellers--product-img-box">
-                <img src="./images/necklace.png" alt="necklace" class="best__sellers--product-img">
+            <div class="products__container--card">
+              <div class="products__main--card-img-wrapper">
+                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
               </div>
-              <div class="best__sellers--product-content">
-                <h3 class="best__sellers--product-title">Marcel Signet Ring in Gold</h3>
-                <span class="best__sellers--product-price">$145.00</span>
-                <span class="best__sellers--product-variants">2 colors</span>
+              <div class="products__main--card-details">
+                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
+                <div class="products__main--card-price-wrapper">
+                  <h4 class="products__main--card-price">$40.00</h4>
+                </div>
+                <span class="products__main--card-variants">
+                  2 colors
+                </span>
               </div>
-            </a>
+            </div>
 
-            <a href="#" class="product best__sellers--product">
-              <div class="best__sellers--product-img-box">
-                <img src="./images/earring.png" alt="bracelet" class="best__sellers--product-img">
+            <div class="products__container--card">
+              <div class="products__main--card-img-wrapper">
+                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
               </div>
-              <div class="best__sellers--product-content">
-                <h3 class="best__sellers--product-title">Miro Signet Ring in Sterling Silver</h3>
-                <span class="best__sellers--product-price">$145.00</span>
-                <span class="best__sellers--product-variants">2 colors</span>
+              <div class="products__main--card-details">
+                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
+                <div class="products__main--card-price-wrapper">
+                  <h4 class="products__main--card-price">$40.00</h4>
+                </div>
+                <span class="products__main--card-variants">
+                  2 colors
+                </span>
               </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section news marquee -->
-      <section class="news">
-        <div class="news__container">
-          <p class="news__item">Ethical sourcing and manufacturing</p>
-          <p class="news__item">Sustainable heirlooms</p>
-          <p class="news__item">Timeless pieces to treasure forever</p>
-        </div>
-      </section>
-
-      <!-- Section feature product -->
-      <section class="feature">
-        <div class="feature__product--container">
-          <div class="feature__product--container-left">
-            <div class="feature__product--content">
-              <h2 class="feature__product--title">Duo Form Ring</h2>
-              <p class="feature__product--subtext">Explore rings for your big moment, and all the little memories after.
-              </p>
-              <button class="feature__product--btn">Shop Now</button>
             </div>
-          </div>
-          <div class="feature__product--container-right">
-            <div class="feature__product--content">
-              <h2 class="feature__product--title">Contemporary and Timeless</h2>
-              <p class="feature__product--subtext">Accessorize with 14k recycled gold all day, everyday.</p>
-              <button class="feature__product--btn">Shop Now</button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Section our promise -->
-      <section class="our__promise">
-        <div class="our__promise--container">
-          <h3 class="our__promise--subtitle">Our Promise</h3>
-          <h2 class="our__promise--title">Ethical is Beautiful</h2>
-          <p class="our__promise--subtext">We are committed to quality products that are manufactured ethically and
-            sustainably. All of our pieces are traceable throughout the supply chain. We strive to ensure our products
-            contribute to the well-being of people and planet, and our efforts put us on track towards a brighter
-            future.
-          </p>
-          <a href="#" class="our__promise--link-btn">Learn more</a>
-        </div>
-      </section>
-
-      <!-- Section Shop the look -->
-      <section class="shop__look">
-        <div class="shop__look--container">
-          <div class="shop__look--container-left">
-          </div>
-          <div class="shop__look--container-right">
-            <h3 class="shop__look--title">Shop the look</h3>
-            <a href="#" class="shop__look--product-card">
-              <span class="shop__look--product-badge">New</span>
-              <div class="shop__look--product-img-box">
-                <img src="./images/image16.png" alt="Ilona Signet Ring" class="shop__look--product-img">
+            <div class="products__container--card">
+              <div class="products__main--card-img-wrapper">
+                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
               </div>
-              <h3 class="shop__look--product-title">Ilona Signet Ring in Gold</h3>
-              <h4 class="shop__look--product-price">
-                <span>$</span>
-                140.00
-              </h4>
-              <h4 class="shop__look--product-variant">
-                <span>2</span>
-                colors
-              </h4>
-            </a>
-
-            <a href="#" class="shop__look--product-card">
-              <span class="shop__look--product-badge">Best Seller</span>
-              <div class="shop__look--product-img-box">
-                <img src="./images/image11.png" alt="Adelaide Hoops" class="shop__look--product-img">
+              <div class="products__main--card-details">
+                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
+                <div class="products__main--card-price-wrapper">
+                  <h4 class="products__main--card-price">$40.00</h4>
+                </div>
+                <span class="products__main--card-variants">
+                  2 colors
+                </span>
               </div>
-              <h3 class="shop__look--product-title">Adelaide Hoops in Gold</h3>
-              <h4 class="shop__look--product-price">
-                <span>Limited Release</span>
-                -
-                <span>$</span>
-                115.00
-              </h4>
-              <h4 class="shop__look--product-variant">
-                <span>2</span>
-                colors
-              </h4>
-            </a>
+            </div>
+
+            <div class="products__container--card">
+              <div class="products__main--card-img-wrapper">
+                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
+              </div>
+              <div class="products__main--card-details">
+                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
+                <div class="products__main--card-price-wrapper">
+                  <h4 class="products__main--card-price">$40.00</h4>
+                </div>
+                <span class="products__main--card-variants">
+                  2 colors
+                </span>
+              </div>
+            </div>
+
+            <div class="products__container--card">
+              <div class="products__main--card-img-wrapper">
+                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
+              </div>
+              <div class="products__main--card-details">
+                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
+                <div class="products__main--card-price-wrapper">
+                  <h4 class="products__main--card-price">$40.00</h4>
+                </div>
+                <span class="products__main--card-variants">
+                  2 colors
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="product__pagination">
+            <a href="#" class="product__pagination--prev-btn">Prev</a>
+            <a href="#" class="product__pagination--btn">1</a>
+            <a href="#" class="product__pagination--btn">2</a>
+            <a href="#" class="product__pagination--btn">3</a>
+            <a href="#" class="product__pagination--btn">4</a>
+            <a href="#" class="product__pagination--btn">5</a>
+            <a href="#" class="product__pagination--next-btn">Next</a>
           </div>
         </div>
+
       </section>
 
-      <!-- Section Image with Text -->
-      <section class="image__with--text">
-        <div class="image__with--text-left">
-          <div class="image__with--text-left-content">
-            <h1 class="image__with--text-title">The Essential Collection</h1>
-            <p class="image__with--text-subtext">We partner with high quality jewellers who only use recycled gold,
-              AAA-grade gemstones, and ethically sourced diamonds.</p>
-            <a href="#" class="image__with--text-link">Shop now</a>
-          </div>
-        </div>
-        <div class="image__with--text-right">
-          <div class="image__with--text-img-box">
-            <img src="./images/image 7.png" alt="essential collection" class="image__with--text-img">
-          </div>
-        </div>
-      </section>
-
-      <!-- Section Shop by Collection -->
-      <section class="collection">
-        <div class="collection__container">
-          <a href="#" class="collection__card">
-            <div class="collection__img--box">
-              <img src="./images/collection 1.png" alt="Bracelets" class="collection__img">
-            </div>
-            <h3 class="collection__card--title">Bracelets</h3>
-          </a>
-
-          <a href="#" class="collection__card">
-            <div class="collection__img--box">
-              <img src="./images/collection 2.png" alt="Earrings" class="collection__img">
-            </div>
-            <h3 class="collection__card--title">Earrings</h3>
-          </a>
-
-          <a href="#" class="collection__card">
-            <div class="collection__img--box">
-              <img src="./images/collection 3.png" alt="Necklaces" class="collection__img">
-            </div>
-            <h3 class="collection__card--title">Necklaces</h3>
-          </a>
-
-          <a href="#" class="collection__card">
-            <div class="collection__img--box">
-              <img src="./images/collection 4.png" alt="Rings" class="collection__img">
-            </div>
-            <h3 class="collection__card--title">Rings</h3>
-          </a>
-        </div>
-      </section>
-
-      <!-- Section Brand -->
-      <section class="brand">
-        <h3 class="brand__title">As seen in</h3>
-        <div class="brand__container">
-          <div class="brand__img--box">
-            <img src="./images/vanity_fair-logo.png.png" alt="vanity fair" class="brand__img">
-          </div>
-          <div class="brand__img--box">
-            <img src="./images/marie_claire-logo.png.png" alt="marie claire" class="brand__img">
-          </div>
-          <div class="brand__img--box">
-            <img src="./images/vogue-logo.png.png" alt="vogue" class="brand__img">
-          </div>
-          <div class="brand__img--box">
-            <img src="./images/allure-logo.png.png" alt="allure" class="brand__img">
-          </div>
-        </div>
-      </section>
-
-      <!-- Section Modern -->
-      <section class="modern">
-        <div class="modern__content">
-          <h1 class="modern__content--title">Modern Heirlooms</h1>
-          <p class="modern__content--subtext">Beautiful pieces to pass down for generations to come</p>
-          <a href="#" class="modern__content--link">View products</a>
-        </div>
-      </section>
-
-      <!-- Section Social -->
-      <section class="social">
-        <h3 class="social__title">Get Inspired</h3>
-        <p class="social__subtext">Tag us on Instagram for a chance to get featured</p>
-        <div class="social__container">
-          <a href="#" class="social__card">
-            <div class="social__card--img-box">
-              <img src="./images/pexels-sunsetoned.jpg.png" alt="julia james" class="social__card--img">
-            </div>
-            <h3 class="social__card--title">@juliajames</h3>
-          </a>
-
-          <a href="#" class="social__card">
-            <div class="social__card--img-box">
-              <img src="./images/broadcast-chelsea-4.jpg.png" alt="willaroams" class="social__card--img">
-            </div>
-            <h3 class="social__card--title">@willaroams</h3>
-          </a>
-
-          <a href="#" class="social__card">
-            <div class="social__card--img-box">
-              <img src="./images/jess-harper-sunday-2.jpg.png" alt="liberty jones" class="social__card--img">
-            </div>
-            <h3 class="social__card--title">@libertyjones</h3>
-          </a>
-
-          <a href="#" class="social__card">
-            <div class="social__card--img-box">
-              <img src="./images/broadcast-chelsea-10.jpg.png" alt="ellasays" class="social__card--img">
-            </div>
-            <h3 class="social__card--title">@ellasays</h3>
-          </a>
-        </div>
-      </section>
-
-      <!-- Section Service -->
-      <section class="service">
-        <div class="service__container">
-          <div class="service__card">
-            <div class="service__card--img-box">
-              <img src="./images/ship.png" alt="delivery" class="service__card--img">
-            </div>
-            <h3 class="service__card--title">Free Expedited Shipping</h3>
-            <p class="service__card--subtext">For orders over $50</p>
-          </div>
-
-          <div class="service__card">
-            <div class="service__card--img-box">
-              <img src="./images/care.png" alt="story" class="service__card--img">
-            </div>
-            <h3 class="service__card--title">Our story</h3>
-            <p class="service__card--subtext">Learn more about us</p>
-          </div>
-
-          <div class="service__card">
-            <div class="service__card--img-box">
-              <img src="./images/chat.png" alt="chat" class="service__card--img">
-            </div>
-            <h3 class="service__card--title">On Demand Stylists</h3>
-            <p class="service__card--subtext">Available 24/7</p>
-          </div>
-        </div>
-      </section>
-
+      <!-- Footer -->
       <footer class="footer">
         <div class="footer__top--container">
           <div class="footer__about--content">
@@ -672,8 +502,9 @@
       </footer>
     </main>
 
+    <!-- Custom JS -->
     <script src="./js/app.js"></script>
-    <script src="./js/tabs-slider.js"></script>
+
   </body>
 
 </html>

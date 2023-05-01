@@ -199,3 +199,20 @@ productCardContainers.forEach((container) => {
     });
   });
 });
+
+/*
+---------------------------------
+ Product Filter Btn
+---------------------------------
+*/
+const productBtnFilter = document.querySelector(".products__search--filters-btn");
+const productFilterContent = document.querySelector(".products__search--filters-content");
+const productFilterBtnText = document.querySelector(".products__search--filters-btn-text");
+productBtnFilter.addEventListener("click", () => {
+  productFilterContent.classList.toggle("products__search--filters-content-active");
+  if (productFilterContent.classList.contains("products__search--filters-content-active")) {
+    productFilterBtnText.textContent = "Close Filters";
+  } else {
+    productFilterBtnText.textContent = "Open Filters";
+  }
+});
