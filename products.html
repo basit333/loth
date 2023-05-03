@@ -225,11 +225,126 @@
 
       <!-- Products Main Container -->
       <section class="products">
+
         <div class="products__search--filters-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam provident voluptatem, dignissimos adipisci
-            excepturi consequatur enim voluptatibus minus nihil at accusamus perferendis fuga voluptas recusandae autem,
-            deleniti eveniet ipsum suscipit.</p>
+
+          <div class="products__search--filters-content-box">
+
+            <div class="products__search--filters-content-top-bar">
+              <h3 class="products__search--filters-content-title">Product type</h3>
+              <img src="./images/plus-icon.png" alt="open" class="products__search--filters-content-plus-img">
+              <img src="./images/minus-icon.png" alt="close" class="products__search--filters-content-minus-img">
+            </div>
+
+            <div class="products__search--filters-data">
+
+              <div class="products__type-box">
+                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="bracelet">
+                <label for="bracelet" class="products__type-checkbox-label">Bracelet</label>
+              </div>
+
+              <div class="products__type-box">
+                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="earrings">
+                <label for="earrings" class="products__type-checkbox-label">Earrings</label>
+              </div>
+
+              <div class="products__type-box">
+                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="necklaces">
+                <label for="necklaces" class="products__type-checkbox-label">Necklaces</label>
+              </div>
+
+              <div class="products__type-box">
+                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="rings">
+                <label for="rings" class="products__type-checkbox-label">Rings</label>
+              </div>
+
+              <div class="products__type-box">
+                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="bespoke">
+                <label for="bespoke" class="products__type-checkbox-label">Bespoke</label>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="products__search--filters-content-box">
+
+            <div class="products__search--filters-content-top-bar">
+              <h3 class="products__search--filters-content-title">Material</h3>
+              <img src="./images/plus-icon.png" alt="open" class="products__search--filters-content-plus-img">
+              <img src="./images/minus-icon.png" alt="close" class="products__search--filters-content-minus-img">
+            </div>
+
+            <div class="products__search--filters-data">
+              <div class="products__search--filters-material-container">
+                <div
+                  class="products__search--filters-material-btn material-red-color products__search--filters-material-btn-active">
+                </div>
+                <div class="products__search--filters-material-btn material-purple-color"></div>
+                <div class="products__search--filters-material-btn material-green-color"></div>
+                <div class="products__search--filters-material-btn material-blue-color"></div>
+                <div class="products__search--filters-material-btn material-brown-color"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="products__search--filters-content-box">
+
+            <div class="products__search--filters-content-top-bar">
+              <h3 class="products__search--filters-content-title">Price</h3>
+              <img src="./images/plus-icon.png" alt="open" class="products__search--filters-content-plus-img">
+              <img src="./images/minus-icon.png" alt="close" class="products__search--filters-content-minus-img">
+            </div>
+
+            <div class="products__search--filters-data">
+
+              <div class="price-slider">
+                <div class="price-progress"></div>
+              </div>
+              <div class="range-input">
+                <input type="range" class="range-min" min="0" max="780" value="0" step="1">
+                <input type="range" class="range-max" min="0" max="780" value="780" step="1">
+              </div>
+              <div class="price-input">
+                <div class="field">
+                  <span>$</span>
+                  <input type="number" class="input-min" value="0">
+                </div>
+                <div class="separator">-</div>
+                <div class="field">
+                  <span>$</span>
+                  <input type="number" class="input-max" value="780">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="products__search--filters-content-box">
+
+              <div class="products__search--filters-content-top-bar">
+                <h3 class="products__search--filters-content-title">Availability</h3>
+                <img src="./images/plus-icon.png" alt="open" class="products__search--filters-content-plus-img">
+                <img src="./images/minus-icon.png" alt="close" class="products__search--filters-content-minus-img">
+              </div>
+
+              <div class="products__search--filters-data">
+                <div class="products__type-box">
+                  <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="instock">
+                  <label for="instock" class="products__type-checkbox-label">In stock</label>
+                </div>
+
+                <div class="products__type-box">
+                  <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="outofstock">
+                  <label for="outofstock" class="products__type-checkbox-label">Out of stock</label>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
         </div>
+
         <div class="products__container--wrapper">
           <div class="products__container">
             <div class="products__feature--card">

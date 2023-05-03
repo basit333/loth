@@ -216,3 +216,88 @@ productBtnFilter.addEventListener("click", () => {
     productFilterBtnText.textContent = "Open Filters";
   }
 });
+
+/*
+---------------------------------
+ Product Filter Content Data
+---------------------------------
+*/
+const filterTopBars = document.querySelectorAll(".products__search--filters-content-top-bar");
+
+// Loop through each top bar element and attach click event listeners
+filterTopBars.forEach(function (topBar) {
+  topBar.addEventListener("click", function () {
+    toggleFiltersData(this);
+  });
+});
+
+// Function to toggle the visibility of filters data and update the images
+function toggleFiltersData(element) {
+  const filtersData = element.nextElementSibling;
+  const filterPlusImg = element.querySelector(".products__search--filters-content-plus-img");
+  const filterMinusImg = element.querySelector(".products__search--filters-content-minus-img");
+
+  // Toggle the visibility of filtersData
+  if (filtersData.style.display === "none" || filtersData.style.display === "") {
+    filtersData.style.display = "block";
+    filterPlusImg.style.display = "none";
+    filterMinusImg.style.display = "inline-block";
+  } else {
+    filtersData.style.display = "none";
+    filterPlusImg.style.display = "inline-block";
+    filterMinusImg.style.display = "none";
+  }
+}
+
+/*
+---------------------------------
+ Product Filter Content Material
+---------------------------------
+*/
+
+// Get all the material buttons
+const materialBtns = document.querySelectorAll(".products__search--filters-material-btn");
+
+// Loop through each button and add a click event listener
+materialBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    // Remove the active class from all buttons
+    materialBtns.forEach((btn) => {
+      btn.classList.remove("products__search--filters-material-btn-active");
+    });
+
+    // Add the active class to the clicked button
+    this.classList.add("products__search--filters-material-btn-active");
+  });
+});
+
+/*
+----------------------------------
+ Product Filter Price Range Slider
+----------------------------------
+*/
+const rangeMin = document.querySelector(".range-min");
+const rangeMax = document.querySelector(".range-max");
+const inputMin = document.querySelector(".input-min");
+const inputMax = document.querySelector(".input-max");
+
+function updateMin() {
+  inputMin.value = rangeMin.value;
+}
+
+function updateMax() {
+  inputMax.value = rangeMax.value;
+}
+
+function updateRangeMin() {
+  rangeMin.value = inputMin.value;
+}
+
+function updateRangeMax() {
+  rangeMax.value = inputMax.value;
+}
+
+rangeMin.addEventListener("input", updateMin);
+rangeMax.addEventListener("input", updateMax);
+inputMin.addEventListener("input", updateRangeMin);
+inputMax.addEventListener("input", updateRangeMax);
