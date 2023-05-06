@@ -13,16 +13,18 @@ const footerEmailLabel = document.getElementById("email-label");
 ------------------------------
 */
 // Add an event listener to the input field
-footerEmailInput.addEventListener("input", function () {
-  // Check if the input field has a value
-  if (footerEmailInput.value.length > 0) {
-    // Hide the label
-    footerEmailLabel.style.display = "none";
-  } else {
-    // Show the label
-    footerEmailLabel.style.display = "block";
-  }
-});
+if (footerEmailInput) {
+  footerEmailInput.addEventListener("input", function () {
+    // Check if the input field has a value
+    if (footerEmailInput.value.length > 0) {
+      // Hide the label
+      footerEmailLabel.style.display = "none";
+    } else {
+      // Show the label
+      footerEmailLabel.style.display = "block";
+    }
+  });
+}
 
 /*
 ------------------------------
@@ -34,13 +36,17 @@ const navOpenBtn = document.querySelector(".nav__menu--btn-open");
 const navCloseBtn = document.querySelector(".nav__menu--btn-close");
 const navMobileMenu = document.querySelector(".mobile__nav--links");
 
-navOpenBtn.addEventListener("click", function () {
-  navMobileMenu.classList.add("mobile__nav--links-open");
-});
+if (navOpenBtn) {
+  navOpenBtn.addEventListener("click", function () {
+    navMobileMenu.classList.add("mobile__nav--links-open");
+  });
+}
 
-navCloseBtn.addEventListener("click", function () {
-  navMobileMenu.classList.remove("mobile__nav--links-open");
-});
+if (navCloseBtn) {
+  navCloseBtn.addEventListener("click", function () {
+    navMobileMenu.classList.remove("mobile__nav--links-open");
+  });
+}
 
 /*
 ------------------------------
@@ -51,13 +57,17 @@ const cartBtn = document.querySelector(".nav__cart--btn");
 const cartContainer = document.querySelector(".nav__cart--container");
 const cartCloseBtn = document.querySelector(".nav__cart--btn-close");
 
-cartBtn.addEventListener("click", function () {
-  cartContainer.classList.add("nav__cart--container-open");
-});
+if (cartBtn) {
+  cartBtn.addEventListener("click", function () {
+    cartContainer.classList.add("nav__cart--container-open");
+  });
+}
 
-cartCloseBtn.addEventListener("click", function () {
-  cartContainer.classList.remove("nav__cart--container-open");
-});
+if (cartCloseBtn) {
+  cartCloseBtn.addEventListener("click", function () {
+    cartContainer.classList.remove("nav__cart--container-open");
+  });
+}
 
 /*
 ------------------------------
@@ -70,8 +80,13 @@ const cartMinusBtn = document.querySelector(".nav__cart--container-product-input
 const cartPlusBtn = document.querySelector(".nav__cart--container-product-input-plus-btn");
 
 // Add click event listeners to the buttons
-cartMinusBtn.addEventListener("click", decreaseValue);
-cartPlusBtn.addEventListener("click", increaseValue);
+if (cartMinusBtn) {
+  cartMinusBtn.addEventListener("click", decreaseValue);
+}
+
+if (cartPlusBtn) {
+  cartPlusBtn.addEventListener("click", increaseValue);
+}
 
 // Function to decrease the input value
 function decreaseValue() {
@@ -98,35 +113,37 @@ function increaseValue() {
 */
 const faqs = document.querySelectorAll(".faq");
 
-faqs.forEach((question) => {
-  const faqImgPlus = question.querySelector(".faq-plus");
-  const faqImgMinus = question.querySelector(".faq-minus");
-  const answerBox = question.nextElementSibling;
+if (faqs) {
+  faqs.forEach((question) => {
+    const faqImgPlus = question.querySelector(".faq-plus");
+    const faqImgMinus = question.querySelector(".faq-minus");
+    const answerBox = question.nextElementSibling;
 
-  question.addEventListener("click", function () {
-    const isOpen = answerBox.classList.contains("faq-answer-box-open");
+    question.addEventListener("click", function () {
+      const isOpen = answerBox.classList.contains("faq-answer-box-open");
 
-    // Close all other answer boxes
-    faqs.forEach((otherQuestion) => {
-      if (otherQuestion !== question) {
-        const otherAnswerBox = otherQuestion.nextElementSibling;
-        const otherFaqImgPlus = otherQuestion.querySelector(".faq-plus");
-        const otherFaqImgMinus = otherQuestion.querySelector(".faq-minus");
+      // Close all other answer boxes
+      faqs.forEach((otherQuestion) => {
+        if (otherQuestion !== question) {
+          const otherAnswerBox = otherQuestion.nextElementSibling;
+          const otherFaqImgPlus = otherQuestion.querySelector(".faq-plus");
+          const otherFaqImgMinus = otherQuestion.querySelector(".faq-minus");
 
-        otherAnswerBox.classList.remove("faq-answer-box-open");
-        otherFaqImgPlus.style.display = "block";
-        otherFaqImgMinus.style.display = "none";
-      }
+          otherAnswerBox.classList.remove("faq-answer-box-open");
+          otherFaqImgPlus.style.display = "block";
+          otherFaqImgMinus.style.display = "none";
+        }
+      });
+
+      // Toggle current answer box
+      answerBox.classList.toggle("faq-answer-box-open", !isOpen);
+
+      // Update icon
+      faqImgPlus.style.display = isOpen ? "block" : "none";
+      faqImgMinus.style.display = isOpen ? "none" : "block";
     });
-
-    // Toggle current answer box
-    answerBox.classList.toggle("faq-answer-box-open", !isOpen);
-
-    // Update icon
-    faqImgPlus.style.display = isOpen ? "block" : "none";
-    faqImgMinus.style.display = isOpen ? "none" : "block";
   });
-});
+}
 
 /*
 ------------------------------
@@ -136,21 +153,23 @@ faqs.forEach((question) => {
 const productTabs = document.querySelectorAll(".product__details-tab");
 const productTabContent = document.querySelectorAll(".product__details-tab-content");
 
-productTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    // Remove active class from all tabs and tab content
-    productTabs.forEach((tab) => tab.classList.remove("active"));
-    productTabContent.forEach((content) => content.classList.remove("active"));
+if (productTabs) {
+  productTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Remove active class from all tabs and tab content
+      productTabs.forEach((tab) => tab.classList.remove("active"));
+      productTabContent.forEach((content) => content.classList.remove("active"));
 
-    // Add active class to the clicked tab
-    tab.classList.add("active");
+      // Add active class to the clicked tab
+      tab.classList.add("active");
 
-    // Show the corresponding tab content with opacity animation
-    const tabId = tab.getAttribute("data-tab");
-    const activeTabContent = document.getElementById(tabId);
-    activeTabContent.classList.add("active");
+      // Show the corresponding tab content with opacity animation
+      const tabId = tab.getAttribute("data-tab");
+      const activeTabContent = document.getElementById(tabId);
+      activeTabContent.classList.add("active");
+    });
   });
-});
+}
 
 /*
 ------------------------------
@@ -160,21 +179,23 @@ productTabs.forEach((tab) => {
 const productTabsItem = document.querySelectorAll(".product__details-tab-item");
 const productTabContainer = document.querySelectorAll(".product__details-tab-container");
 
-productTabsItem.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    // Remove active class from all tabs and tab content
-    productTabsItem.forEach((tab) => tab.classList.remove("product__details-tab-item-active"));
-    productTabContainer.forEach((content) => content.classList.remove("product__details-tab-container-active"));
+if (productTabsItem) {
+  productTabsItem.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Remove active class from all tabs and tab content
+      productTabsItem.forEach((tab) => tab.classList.remove("product__details-tab-item-active"));
+      productTabContainer.forEach((content) => content.classList.remove("product__details-tab-container-active"));
 
-    // Add active class to the clicked tab
-    tab.classList.add("product__details-tab-item-active");
+      // Add active class to the clicked tab
+      tab.classList.add("product__details-tab-item-active");
 
-    // Show the corresponding tab content with opacity animation
-    const tabId = tab.getAttribute("data-tab");
-    const activeTabContent = document.getElementById(tabId);
-    activeTabContent.classList.add("product__details-tab-container-active");
+      // Show the corresponding tab content with opacity animation
+      const tabId = tab.getAttribute("data-tab");
+      const activeTabContent = document.getElementById(tabId);
+      activeTabContent.classList.add("product__details-tab-container-active");
+    });
   });
-});
+}
 
 /*
 ---------------------------------
@@ -183,22 +204,24 @@ productTabsItem.forEach((tab) => {
 */
 const productCardContainers = document.querySelectorAll(".product__details-tab-product-card");
 
-productCardContainers.forEach((container) => {
-  const checkBoxBtns = container.querySelectorAll(".checkbox-btn");
+if (productCardContainers) {
+  productCardContainers.forEach((container) => {
+    const checkBoxBtns = container.querySelectorAll(".checkbox-btn");
 
-  checkBoxBtns.forEach((checkboxBtn) => {
-    checkboxBtn.addEventListener("click", function (event) {
-      event.stopPropagation();
+    checkBoxBtns.forEach((checkboxBtn) => {
+      checkboxBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
 
-      // Remove active class from all checkboxes within the same card
-      const checkboxes = container.querySelectorAll(".checkbox-btn");
-      checkboxes.forEach((cb) => cb.classList.remove("checkbox-btn-active"));
+        // Remove active class from all checkboxes within the same card
+        const checkboxes = container.querySelectorAll(".checkbox-btn");
+        checkboxes.forEach((cb) => cb.classList.remove("checkbox-btn-active"));
 
-      // Add active class to the clicked checkbox
-      this.classList.add("checkbox-btn-active");
+        // Add active class to the clicked checkbox
+        this.classList.add("checkbox-btn-active");
+      });
     });
   });
-});
+}
 
 /*
 ---------------------------------
@@ -208,14 +231,17 @@ productCardContainers.forEach((container) => {
 const productBtnFilter = document.querySelector(".products__search--filters-btn");
 const productFilterContent = document.querySelector(".products__search--filters-content");
 const productFilterBtnText = document.querySelector(".products__search--filters-btn-text");
-productBtnFilter.addEventListener("click", () => {
-  productFilterContent.classList.toggle("products__search--filters-content-active");
-  if (productFilterContent.classList.contains("products__search--filters-content-active")) {
-    productFilterBtnText.textContent = "Close Filters";
-  } else {
-    productFilterBtnText.textContent = "Open Filters";
-  }
-});
+
+if (productBtnFilter) {
+  productBtnFilter.addEventListener("click", () => {
+    productFilterContent.classList.toggle("products__search--filters-content-active");
+    if (productFilterContent.classList.contains("products__search--filters-content-active")) {
+      productFilterBtnText.textContent = "Close Filters";
+    } else {
+      productFilterBtnText.textContent = "Open Filters";
+    }
+  });
+}
 
 /*
 ---------------------------------
@@ -225,11 +251,13 @@ productBtnFilter.addEventListener("click", () => {
 const filterTopBars = document.querySelectorAll(".products__search--filters-content-top-bar");
 
 // Loop through each top bar element and attach click event listeners
-filterTopBars.forEach(function (topBar) {
-  topBar.addEventListener("click", function () {
-    toggleFiltersData(this);
+if (filterTopBars) {
+  filterTopBars.forEach(function (topBar) {
+    topBar.addEventListener("click", function () {
+      toggleFiltersData(this);
+    });
   });
-});
+}
 
 // Function to toggle the visibility of filters data and update the images
 function toggleFiltersData(element) {
@@ -259,17 +287,20 @@ function toggleFiltersData(element) {
 const materialBtns = document.querySelectorAll(".products__search--filters-material-btn");
 
 // Loop through each button and add a click event listener
-materialBtns.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    // Remove the active class from all buttons
-    materialBtns.forEach((btn) => {
-      btn.classList.remove("products__search--filters-material-btn-active");
-    });
 
-    // Add the active class to the clicked button
-    this.classList.add("products__search--filters-material-btn-active");
+if (materialBtns) {
+  materialBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      // Remove the active class from all buttons
+      materialBtns.forEach((btn) => {
+        btn.classList.remove("products__search--filters-material-btn-active");
+      });
+
+      // Add the active class to the clicked button
+      this.classList.add("products__search--filters-material-btn-active");
+    });
   });
-});
+}
 
 /*
 ----------------------------------
@@ -297,7 +328,18 @@ function updateRangeMax() {
   rangeMax.value = inputMax.value;
 }
 
-rangeMin.addEventListener("input", updateMin);
-rangeMax.addEventListener("input", updateMax);
-inputMin.addEventListener("input", updateRangeMin);
-inputMax.addEventListener("input", updateRangeMax);
+if (rangeMin) {
+  rangeMin.addEventListener("input", updateMin);
+}
+
+if (rangeMax) {
+  rangeMax.addEventListener("input", updateMax);
+}
+
+if (inputMin) {
+  inputMin.addEventListener("input", updateRangeMin);
+}
+
+if (inputMax) {
+  inputMax.addEventListener("input", updateRangeMax);
+}

@@ -188,302 +188,150 @@
         </div>
       </nav>
 
-      <!-- Products Page Header -->
-      <section class="products__page--header">
-        <h1 class="products__page--title">Best sellers</h1>
-        <p class="products__page--subtext">Our most popular earrings, bracelets, and necklaces at our best prices.</p>
+      <!-- Section About The Brand -->
+      <section class="about__brand">
+        <div class="about__brand--container">
+          <div class="about__brand--container-left">
+            <div class="about__brand--container-left-content">
+              <h3 class="about__brand--container-left-title">About the Brand</h3>
+              <p class="about__brand--container-left-subtext">
+                Loth Fine Jewelry is the creation of third generation
+                jeweler Lorien Yonker. Designed in her Chicago studio, every piece utilizes only the finest colored gems
+                sourced from one of the oldest cutting houses in Germany.
+                One of a kind pieces are complimented by a number of styles in the brand’s signature stud shaped cut or
+                floating bezel setting, resulting in an edgy yet elegant aesthetic designed to pair just as easily with
+                jeans and a T-shirt as with power suits and evening wear.</p>
+            </div>
+          </div>
+          <div class="about__brand--container-right">
+            <img src="./images/modern.png" alt="about brand" class="about__brand--container-right-img">
+          </div>
+        </div>
       </section>
 
-      <!-- Products Page Filters/Sort By -->
-      <section class="products__search--container">
-        <div class="products__search--btns">
-          <button class="products__search--filters-btn">
-            <img src="./images/filter.png" alt="" class="products__search--filters-img-filter">
-            <span class="products__search--filters-btn-text">
-              Open Filters
-            </span>
-            <img src="./images/down-arrow.png" alt="" class="products__search--filters-img-down-arrow">
-          </button>
-          <div class="products__search--sort-btn-container">
-            <select class="products__search--sort-btn">
-              <option class="products__search--sort-item">Sort by</option>
-              <option class="products__search--sort-item">Featured</option>
-              <option class="products__search--sort-item">Best selling</option>
-              <option class="products__search--sort-item">Alphabetically, A-Z</option>
-              <option class="products__search--sort-item">Alphabetically, Z-A</option>
-              <option class="products__search--sort-item">Price, low to high</option>
-              <option class="products__search--sort-item">Price, high to low</option>
-              <option class="products__search--sort-item">Date, old to new</option>
-              <option class="products__search--sort-item">Date, new to old</option>
-            </select>
-            <img src="./images/down-arrow.png" alt="" class="products__search--sort-img-down-arrow">
-          </div>
-        </div>
-        <!-- Sort By Content -->
+      <!-- Section Commitments -->
+      <section class="commitments">
+        <h2 class="commitments__title">Commitments</h2>
+        <div class="commitments__container">
 
+          <div class="commitments__card">
+            <div class="commitments__card--img-box">
+              <img src="./images/Commitments-2.png" alt="" class="commitments__card--img">
+            </div>
+            <div class="commitments__card--text-content">
+              <h3 class="commitments__card--title">Quality & Care</h3>
+              <p class="commitments__card--subtext">Most of the jewelry is 14k gold filled, sterling silver, or rose
+                gold filled. The best jewelry is always well-cared for. Knowing the best ways to maintain your jewelry
+                can keep your precious pieces looking great for life.</p>
+            </div>
+          </div>
+
+          <div class="commitments__card">
+            <div class="commitments__card--img-box">
+              <img src="./images/Commitments-1.png" alt="" class="commitments__card--img">
+            </div>
+            <div class="commitments__card--text-content">
+              <h3 class="commitments__card--title">Giving Back</h3>
+              <p class="commitments__card--subtext">1% of all of our profits are donated to the ATC foundation to combat
+                deforestation. We do our part by using non-harmful, compostable packaging materials. All of our
+                ingredients are naturally sourced and biodegradable.</p>
+            </div>
+          </div>
+
+          <div class="commitments__card">
+            <div class="commitments__card--img-box">
+              <img src="./images/Commitments-3.png" alt="" class="commitments__card--img">
+            </div>
+            <div class="commitments__card--text-content">
+              <h3 class="commitments__card--title">Community Oriented</h3>
+              <p class="commitments__card--subtext">We partner with various organizations in our areas that support
+                creative endeavours for underrepresented communities and arts & crafts programs for youth and children.
+                We want to help people pursue their creativity!</p>
+            </div>
+          </div>
+
+        </div>
       </section>
 
-      <!-- Products Main Container -->
-      <section class="products">
-
-        <div class="products__search--filters-content">
-
-          <div class="products__search--filters-content-box">
-
-            <div class="products__search--filters-content-top-bar">
-              <h3 class="products__search--filters-content-title">Product type</h3>
-              <img src="./images/plus-icon.png" alt="open" class="products__search--filters-content-plus-img">
-              <img src="./images/minus-icon.png" alt="close" class="products__search--filters-content-minus-img">
-            </div>
-
-            <div class="products__search--filters-data">
-
-              <div class="products__type-box">
-                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="bracelet">
-                <label for="bracelet" class="products__type-checkbox-label">Bracelet</label>
-              </div>
-
-              <div class="products__type-box">
-                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="earrings">
-                <label for="earrings" class="products__type-checkbox-label">Earrings</label>
-              </div>
-
-              <div class="products__type-box">
-                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="necklaces">
-                <label for="necklaces" class="products__type-checkbox-label">Necklaces</label>
-              </div>
-
-              <div class="products__type-box">
-                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="rings">
-                <label for="rings" class="products__type-checkbox-label">Rings</label>
-              </div>
-
-              <div class="products__type-box">
-                <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="bespoke">
-                <label for="bespoke" class="products__type-checkbox-label">Bespoke</label>
-              </div>
-
-            </div>
-
+      <!-- Section Founder -->
+      <section class="founder">
+        <div class="founder__container">
+          <div class="founder__container-left">
+            <img src="./images/founder.png" alt="founder image" class="founder__container-left-img">
           </div>
-
-          <div class="products__search--filters-content-box">
-
-            <div class="products__search--filters-content-top-bar">
-              <h3 class="products__search--filters-content-title">Material</h3>
-              <img src="./images/plus-icon.png" alt="open" class="products__search--filters-content-plus-img">
-              <img src="./images/minus-icon.png" alt="close" class="products__search--filters-content-minus-img">
+          <div class="founder__brand--container-right">
+            <div class="founder__container-right-content">
+              <h3 class="founder__container-right-title">From our Founder</h3>
+              <p class="founder__container-right-subtext">
+                I wanted to create beautiful, unique pieces that were accessible to everyone. I believe that jewelry
+                should be an expression of your individual style and personality, and I'm passionate about helping
+                people find the perfect piece to express themselves. I'm also committed to offering high-quality,
+                affordable jewelry that is ethically and sustainably produced.</p>
             </div>
-
-            <div class="products__search--filters-data">
-              <div class="products__search--filters-material-container">
-                <div
-                  class="products__search--filters-material-btn material-red-color products__search--filters-material-btn-active">
-                </div>
-                <div class="products__search--filters-material-btn material-purple-color"></div>
-                <div class="products__search--filters-material-btn material-green-color"></div>
-                <div class="products__search--filters-material-btn material-blue-color"></div>
-                <div class="products__search--filters-material-btn material-brown-color"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="products__search--filters-content-box">
-
-            <div class="products__search--filters-content-top-bar">
-              <h3 class="products__search--filters-content-title">Price</h3>
-              <img src="./images/plus-icon.png" alt="open" class="products__search--filters-content-plus-img">
-              <img src="./images/minus-icon.png" alt="close" class="products__search--filters-content-minus-img">
-            </div>
-
-            <div class="products__search--filters-data">
-
-              <div class="price-slider">
-                <div class="price-progress"></div>
-              </div>
-              <div class="range-input">
-                <input type="range" class="range-min" min="0" max="780" value="0" step="1">
-                <input type="range" class="range-max" min="0" max="780" value="780" step="1">
-              </div>
-              <div class="price-input">
-                <div class="field">
-                  <span>$</span>
-                  <input type="number" class="input-min" value="0">
-                </div>
-                <div class="separator">-</div>
-                <div class="field">
-                  <span>$</span>
-                  <input type="number" class="input-max" value="780">
-                </div>
-              </div>
-
-            </div>
-
-            <div class="products__search--filters-content-box">
-
-              <div class="products__search--filters-content-top-bar">
-                <h3 class="products__search--filters-content-title">Availability</h3>
-                <img src="./images/plus-icon.png" alt="open" class="products__search--filters-content-plus-img">
-                <img src="./images/minus-icon.png" alt="close" class="products__search--filters-content-minus-img">
-              </div>
-
-              <div class="products__search--filters-data">
-                <div class="products__type-box">
-                  <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="instock">
-                  <label for="instock" class="products__type-checkbox-label">In stock</label>
-                </div>
-
-                <div class="products__type-box">
-                  <input class="products__type-checkbox-input" type="checkbox" name="checkbox" id="outofstock">
-                  <label for="outofstock" class="products__type-checkbox-label">Out of stock</label>
-                </div>
-              </div>
-
-            </div>
-
           </div>
         </div>
+      </section>
 
-        <div class="products__container--wrapper">
-          <div class="products__container">
-            <a href="#" class="products__feature--card">
-              <img src="./images/feature-product.png" alt="feature product" class="products__feature--card-img">
-            </a>
+      <!-- Section news marquee -->
+      <section class="news about-news">
+        <div class="news__container about-news-container">
+          <p class="news__item about-news-item">Express yourself in your own way</p>
+          <p class="news__item about-news-item">Express yourself in your own way</p>
+          <p class="news__item about-news-item">Express yourself in your own way</p>
+          <p class="news__item about-news-item">Express yourself in your own way</p>
+        </div>
+      </section>
 
-            <a href="#" class="products__container--card">
-              <div class="products__main--card-img-wrapper">
-                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
-              </div>
-              <div class="products__main--card-details">
-                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
-                <div class="products__main--card-price-wrapper">
-                  <h4 class="products__main--card-sale-price">$40.00</h4>
-                  <h4 class="products__main--card-old-price">$98.00</h4>
-                </div>
-                <span class="products__main--card-variants">
-                  2 colors
-                </span>
-              </div>
-              <span class="products__main--card-sale-badge">Sale</span>
-            </a>
+      <!-- Section Shop by Collection -->
+      <section class="collection">
+        <div class="collection__container">
+          <a href="#" class="collection__card">
+            <div class="collection__img--box">
+              <img src="./images/collection 1.png" alt="Bracelets" class="collection__img">
+            </div>
+            <h3 class="collection__card--title">Bracelets</h3>
+          </a>
 
-            <a href="#" class="products__container--card">
-              <div class="products__main--card-img-wrapper">
-                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
-              </div>
-              <div class="products__main--card-details">
-                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
-                <div class="products__main--card-price-wrapper">
-                  <h4 class="products__main--card-sale-price">$40.00</h4>
-                  <h4 class="products__main--card-old-price">$98.00</h4>
-                </div>
-              </div>
-            </a>
+          <a href="#" class="collection__card">
+            <div class="collection__img--box">
+              <img src="./images/collection 2.png" alt="Earrings" class="collection__img">
+            </div>
+            <h3 class="collection__card--title">Earrings</h3>
+          </a>
 
-            <a href="#" class="products__container--card">
-              <div class="products__main--card-img-wrapper">
-                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
-              </div>
-              <div class="products__main--card-details">
-                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
-                <div class="products__main--card-price-wrapper">
-                  <h4 class="products__main--card-price">$40.00</h4>
-                </div>
-                <span class="products__main--card-variants">
-                  2 colors
-                </span>
-              </div>
-            </a>
+          <a href="#" class="collection__card">
+            <div class="collection__img--box">
+              <img src="./images/collection 3.png" alt="Necklaces" class="collection__img">
+            </div>
+            <h3 class="collection__card--title">Necklaces</h3>
+          </a>
 
-            <a href="#" class="products__container--card">
-              <div class="products__main--card-img-wrapper">
-                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
-              </div>
-              <div class="products__main--card-details">
-                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
-                <div class="products__main--card-price-wrapper">
-                  <h4 class="products__main--card-price">$40.00</h4>
-                </div>
-                <span class="products__main--card-variants">
-                  2 colors
-                </span>
-              </div>
-            </a>
+          <a href="#" class="collection__card">
+            <div class="collection__img--box">
+              <img src="./images/collection 4.png" alt="Rings" class="collection__img">
+            </div>
+            <h3 class="collection__card--title">Rings</h3>
+          </a>
+        </div>
+      </section>
 
-            <a href="#" class="products__container--card">
-              <div class="products__main--card-img-wrapper">
-                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
-              </div>
-              <div class="products__main--card-details">
-                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
-                <div class="products__main--card-price-wrapper">
-                  <h4 class="products__main--card-price">$40.00</h4>
-                </div>
-                <span class="products__main--card-variants">
-                  2 colors
-                </span>
-              </div>
-            </a>
-
-            <a href="#" class="products__container--card">
-              <div class="products__main--card-img-wrapper">
-                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
-              </div>
-              <div class="products__main--card-details">
-                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
-                <div class="products__main--card-price-wrapper">
-                  <h4 class="products__main--card-price">$40.00</h4>
-                </div>
-                <span class="products__main--card-variants">
-                  2 colors
-                </span>
-              </div>
-            </a>
-
-            <a href="#" class="products__container--card">
-              <div class="products__main--card-img-wrapper">
-                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
-              </div>
-              <div class="products__main--card-details">
-                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
-                <div class="products__main--card-price-wrapper">
-                  <h4 class="products__main--card-price">$40.00</h4>
-                </div>
-                <span class="products__main--card-variants">
-                  2 colors
-                </span>
-              </div>
-            </a>
-
-            <a href="#" class="products__container--card">
-              <div class="products__main--card-img-wrapper">
-                <img src="./images/image10.png" alt="ring" class="products__main--card-img">
-              </div>
-              <div class="products__main--card-details">
-                <h3 class="products__main--card-title">Harris Long Pendant in Gold</h3>
-                <div class="products__main--card-price-wrapper">
-                  <h4 class="products__main--card-price">$40.00</h4>
-                </div>
-                <span class="products__main--card-variants">
-                  2 colors
-                </span>
-              </div>
-            </a>
-
+      <!-- Section Brand -->
+      <section class="brand">
+        <h3 class="brand__title">As seen in</h3>
+        <div class="brand__container">
+          <div class="brand__img--box">
+            <img src="./images/vanity_fair-logo.png.png" alt="vanity fair" class="brand__img">
           </div>
-
-          <div class="product__pagination">
-            <a href="#" class="product__pagination--prev-btn">Prev</a>
-            <a href="#" class="product__pagination--btn">1</a>
-            <a href="#" class="product__pagination--btn">2</a>
-            <a href="#" class="product__pagination--btn">3</a>
-            <a href="#" class="product__pagination--btn">4</a>
-            <a href="#" class="product__pagination--btn">5</a>
-            <a href="#" class="product__pagination--next-btn">Next</a>
+          <div class="brand__img--box">
+            <img src="./images/marie_claire-logo.png.png" alt="marie claire" class="brand__img">
+          </div>
+          <div class="brand__img--box">
+            <img src="./images/vogue-logo.png.png" alt="vogue" class="brand__img">
+          </div>
+          <div class="brand__img--box">
+            <img src="./images/allure-logo.png.png" alt="allure" class="brand__img">
           </div>
         </div>
-
       </section>
 
       <!-- Footer -->

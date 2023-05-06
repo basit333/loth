@@ -11,18 +11,22 @@ let prevTranslate = 0;
 let currentIndex = 0;
 
 // Add event listeners to the tabs
-bestSellerTabs.forEach((tab, index) => {
-  tab.addEventListener("click", () => activateTab(index));
-});
+if (bestSellerTabs) {
+  bestSellerTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateTab(index));
+  });
+}
 
 // Add event listeners to the product container for touch and mouse events
-bestSellerProductContainer.addEventListener("touchstart", touchStart);
-bestSellerProductContainer.addEventListener("touchmove", touchMove);
-bestSellerProductContainer.addEventListener("touchend", touchEnd);
-bestSellerProductContainer.addEventListener("mousedown", dragStart);
-bestSellerProductContainer.addEventListener("mouseup", dragEnd);
-bestSellerProductContainer.addEventListener("mouseleave", dragEnd);
-bestSellerProductContainer.addEventListener("mousemove", drag);
+if (bestSellerProductContainer) {
+  bestSellerProductContainer.addEventListener("touchstart", touchStart);
+  bestSellerProductContainer.addEventListener("touchmove", touchMove);
+  bestSellerProductContainer.addEventListener("touchend", touchEnd);
+  bestSellerProductContainer.addEventListener("mousedown", dragStart);
+  bestSellerProductContainer.addEventListener("mouseup", dragEnd);
+  bestSellerProductContainer.addEventListener("mouseleave", dragEnd);
+  bestSellerProductContainer.addEventListener("mousemove", drag);
+}
 
 // Function to activate the selected tab
 function activateTab(index) {
