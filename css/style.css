@@ -2436,8 +2436,6 @@ label {
   margin-left: 0;
 }
 
-.products__search--filters-content-box {}
-
 .products__search--filters-content-top-bar {
   display: flex;
   align-items: center;
@@ -2643,6 +2641,7 @@ input[type="range"]::-moz-range-thumb {
 .products {
   display: flex;
   margin-bottom: 50px;
+  overflow-x: hidden;
 }
 
 .products__container {
