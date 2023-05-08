@@ -343,3 +343,22 @@ if (inputMin) {
 if (inputMax) {
   inputMax.addEventListener("input", updateRangeMax);
 }
+
+/*
+------------------------------
+ FAQ Page Tab
+------------------------------
+*/
+const faqPageTabs = document.querySelectorAll(".faq__container--left-content-link");
+
+if (faqPageTabs) {
+  faqPageTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Remove active class from all tabs and tab content
+      faqPageTabs.forEach((tab) => tab.classList.remove("faq__container--left-content-link-active"));
+
+      // Add active class to the clicked tab
+      tab.classList.add("faq__container--left-content-link-active");
+    });
+  });
+}
